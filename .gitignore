@@ -87,3 +87,8 @@ db.json
 .eslintcache
 .stylelintcache
 .prettierignore
+
+## Local directory to store default references from original repo and raw files that are  not ready for publishing 
+.local
+
+

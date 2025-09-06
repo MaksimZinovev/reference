@@ -1,5 +1,5 @@
 ---
-title: DSPy-adapters
+title: DSPy Adapters
 date: 2025-09-01  16:23:31.704621
 background: bg-[#2858ee]
 tags:
