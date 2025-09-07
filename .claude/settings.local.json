@@ -5,9 +5,22 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/)",
       "Bash(npx hexo generate)",
       "Bash(npx hexo clean)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/search.json)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/search.json)",
+      "Read(//Users/maksim/.config/**)",
+      "Read(//Users/maksim/**)",
+      "Bash(find .claude/ -name \"*.json\" -exec echo \"=== {} ===\" ; -exec cat {} ;)",
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__list_directory_with_sizes",
+      "mcp__filesystem__read_text_file",
+      "Bash(git remote get-url origin)",
+      "WebSearch",
+      "Bash(npx -y @modelcontextprotocol/server-filesystem /Users/maksim/repos/reference)",
+      "Bash(npx -y @modelcontextprotocol/server-github)",
+      "Bash(claude mcp list)"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enabledMcpjsonServers": ["filesystem", "github"],
+  "outputStyle": "Explanatory"
 }
