@@ -8,15 +8,20 @@
                     <div class="w-24 h-full bg-gradient-to-r from-indigo-500 to-purple-600 dark:bg-slate-800"></div>
                 </div>
                 <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
-                    <% site.categories.findOne({name: category}).posts.sort('date').map(function(post){ %>
-                        <%- partial('_partial/index/card', {
-                            url: url_for(post.path),
-                            title: post.title,
-                            label: post.label,
-                            slug: post.slug,
-                            background: post.background == undefined ? 'bg-gradient-to-r from-indigo-500 to-purple-600' : post.background
-                        }) %>
-                    <% }) %>
+                    <% let categoryData = site.categories.findOne({name: category}); %>
+                    <% if (categoryData && categoryData.posts) { %>
+                        <% categoryData.posts.sort('date').map(function(post){ %>
+                            <%- partial('_partial/index/card', {
+                                url: url_for(post.path),
+                                title: post.title,
+                                label: post.label,
+                                slug: post.slug,
+                                background: post.background == undefined ? 'bg-gradient-to-r from-indigo-500 to-purple-600' : post.background
+                            }) %>
+                        <% }) %>
+                    <% } else { %>
+                        <p class="col-span-4 text-slate-500">No posts found in <%= category %></p>
+                    <% } %>
                 </div>
             <% }); %>
         </div>

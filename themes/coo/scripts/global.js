@@ -73,12 +73,14 @@ hexo.extend.generator.register('list', (locals) => {
 
   themeConfig.index_categories.forEach((category) => {
     content += `<details>\n<summary>${category}</summary>\n\n`;
-    locals.categories
-      .findOne({ name: category })
-      .posts.sort('-date')
-      .map((post) => {
+    const categoryData = locals.categories.findOne({ name: category });
+    if (categoryData && categoryData.posts) {
+      categoryData.posts.sort('-date').map((post) => {
         content += `- [${post.title}](https://cheatsheets.zip/${post.path}): ${post.intro.trim()}\n`;
       });
+    } else {
+      content += `No posts found in category: ${category}\n`;
+    }
     content += '\n</details>\n\n';
   });
 

@@ -16,12 +16,12 @@ index_categories:
 index_recommends:
   - chatgpt
   - bash
-  - python
-  - javascript
-  - go
-  - vim
+  - es6
+  - docker
+  - git
+  - vscode
   - regex
-  - awk
+  - css3
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts

@@ -393,6 +393,45 @@ categories:
 
 Only the `title` and `intro` fields are required, and the other options can be left blank.
 
+## 🔧 Site Maintenance
+
+When adding or removing cheat sheets, follow these steps to keep the site working properly:
+
+### After Adding/Removing Posts
+
+1. **Update Theme Configuration** (`themes/coo/_config.yml`)
+   - **`index_recommends`**: Ensure all slugs exist in `source/_posts/`
+   - **`index_categories`**: Only keep categories that are actually used in posts
+
+2. **Check Category Consistency**
+   - Categories in your post front matter must match those in `index_categories`
+   - Unused categories in `index_categories` will show "No posts found"
+
+3. **Verification Commands**
+
+   ```bash
+   # Check which posts you have
+   ls source/_posts/ | sed 's/\.md$//'
+
+   # Generate site to test for errors
+   npx hexo generate
+
+   # Start dev server if no errors
+   npx hexo server
+   ```
+
+### Important Rules
+
+- Every slug in `index_recommends` must exist as a `.md` file in `source/_posts/`
+- Every category in `index_categories` must be used by at least one post
+- The site has null checks to prevent total breakage, but unused categories show "no posts"
+
+### Time-Saving Tips
+
+- Keep existing slug names when possible to minimize config changes
+- Check for errors immediately after modifying posts (`npx hexo generate`)
+- The development server is at `http://localhost:4000` when running `npm run dev`
+
 <a href="https://github.com/Fechin/reference/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Fechin/reference" />
 </a>
