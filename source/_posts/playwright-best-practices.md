@@ -1,14 +1,20 @@
 ---
-title: Playwright
+title: Playwright best practices
 date: 2025-07-23 16:23:31.704621
 background: bg-[#2858ee]
 tags:
   - playwright
   - testing
+  - best-practices
 categories:
   - Programming
+  - Testing
 intro: |
-  Based on Checkly’s “Best Practices for Writing Tests in Playwright”.
+  Playwright best practices.
+plugins:
+  - copyCode
+  - tooltip
+  - mermaid
 ---
 
 ## Playwright — Best Practices for Writing Tests
@@ -205,3 +211,13 @@ _Independent tests can run in parallel and in any order._ ([Checkly][1])
 - Optimize for human readability & quick triage ([Checkly][1])
 
 [1]: https://www.checklyhq.com/learn/playwright/writing-tests/ 'Best Practices for Writing Tests in Playwright'
+
+## Any Suggestions?
+
+- [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/playwright-best-practices.md)
+
+<style>
+em { font-size: 0.785em; }
+strong {font-weight: 400;}
+ul.collapsible > li > pre { padding-left: 0; padding-right: 0; font-size: 0.925em;}
+</style>

@@ -135,6 +135,7 @@ Reference provides cheat sheets for the following:
 - [Netcat](https://cheatsheets.zip/nc.html): This cheat sheet provides various for using netcat on both Linux and Unix.
 - [Taskset](https://cheatsheets.zip/taskset): This quick reference cheat sheet for tasket command.
 - [GnuPG](https://cheatsheets.zip/gnupg): A cheatsheet for GnuPG, the encryption and signing software.
+
 </details>
 
 <details>
@@ -372,24 +373,60 @@ when creating or editing cheat sheets. To get started with development, follow t
    [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
 3. Run `npm install` in the root folder to install dependencies.
 4. Run `npm run dev` to start a dev server. This serves the project and live reloads when any files are changed, then
-   visit http://127.0.0.1:4000 preview.
+   visit <http://127.0.0.1:4000> preview.
 5. Submit a pull request and wait for it to be reviewed and merged.
+
+## Adding new Cheat Sheet
 
 To create or edit a cheat sheet, you'll need to create or edit a markdown file in `source/_posts/{filename}.md`. The
 file should include a front matter section with the following format:
 
+1. Create create a markdown file, e.g. `source/_posts/playwright-best-practices.md`
+2. Populate frontmatter. See example below.
+3. Open `themes/coo/_config.yml` and verify each post category is present (e.g. "Programming", "Testing")
+4. Add svg icon, e.g. `source/assets/icon/playwright-best-practices.svg` (10x10)
+5. Add plugins in frontmatter if needed, .e.g. `copyCode`
+6. Add footer, see example below
+
+<details>
+
+Frontmatter:
+
 ```markdown
 ---
-title: CheatSheets
-date: 2020-11-25 18:28:43
-icon: icon-style
-background: bg-indigo-600
+title: Playwright best practices
+date: 2025-07-23 16:23:31.704621
+background: bg-[#2858ee]
 tags:
+  - playwright
+  - testing
+  - best-practices
 categories:
-- Other
-  intro: This is a reference of styles that you can use on quickref cheat sheets!
+  - Programming
+  - Testing
+intro: |
+  Playwright best practices.
+plugins:
+  - copyCode
 ---
 ```
+
+Footer:
+
+```
+## Any Suggestions?
+
+- [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/playwright-best-practices.md)
+
+<style>
+em { font-size: 0.785em; }
+strong {font-weight: 400;}
+ul.collapsible > li > pre { padding-left: 0; padding-right: 0; font-size: 0.925em;}
+</style>
+
+```
+
+</details>
 
 Only the `title` and `intro` fields are required, and the other options can be left blank.
 
