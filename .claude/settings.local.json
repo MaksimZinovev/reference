@@ -43,7 +43,18 @@
       "Bash(git checkout -b feature/github-pages-setup)",
       "Bash(task-master set-status --id=2 --status=done)",
       "Bash(task-master show 3)",
-      "Bash(task-master set-status --id=3 --status=in-progress)"
+      "Bash(task-master set-status --id=3 --status=in-progress)",
+      "Bash(task-master show 2)",
+      "Bash(gh repo view)",
+      "Bash(task-master show 4)",
+      "Bash(task-master add-task \"Updated _config.yml for GitHub Pages Project site deployment with url: https://maksimzinovev.github.io/reference and root: /reference/ instead of original production domain settings\")",
+      "Bash(task-master add-task --title=\"Configure GitHub Pages Settings\" --description=\"Updated _config.yml for GitHub Pages Project site deployment with url: https://maksimzinovev.github.io/reference and root: /reference/ instead of original production domain settings. Verified proper asset linking and tested build process successfully.\")",
+      "Bash(task-master --help)",
+      "Bash(task-master update-task --id=2 --prompt=\"Successfully implemented GitHub Pages Project site deployment configuration. Updated _config.yml with url: https://maksimzinovev.github.io/reference and root: /reference/ for project site deployment. Replaced original production domain settings (cheatsheets.zip) with GitHub Pages URL structure. Verified proper asset linking and tested build process successfully. All generated HTML files show correct GitHub Pages URL structure and asset paths.\")",
+      "Bash(task-master remove-task --id=11 -y)",
+      "Bash(task-master add-subtask --parent=4 --title=\"Fix hardcoded domain references in EJS templates\" --description=\"Update hardcoded ''cheatsheets.zip'' references in hero.ejs, footer.ejs, and other EJS template files to use dynamic URL configuration. This includes tooltips, affiliate links, and copyright text.\")",
+      "Bash(task-master add-subtask --parent=4 --title=\"Fix hardcoded domain in global.js URL generation\" --description=\"Update hardcoded ''https://cheatsheets.zip'' URL in themes/coo/scripts/global.js line 79 to use dynamic URL configuration. This prevents broken links in generated list.md file.\")",
+      "Bash(task-master add-subtask --parent=4 --title=\"Test generated links after domain reference fixes\" --description=\"After updating hardcoded domain references, run build process and verify all generated URLs in HTML, list.md, and other generated files point to correct GitHub Pages domain structure.\")"
     ],
     "deny": [],
     "ask": []

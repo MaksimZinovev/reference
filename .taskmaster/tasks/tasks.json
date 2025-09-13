@@ -16,12 +16,40 @@
         "id": 2,
         "title": "Configure GitHub Pages Settings",
         "description": "Set up the appropriate URL configuration based on chosen GitHub Pages type",
-        "details": "Determine whether using Project site or User/Org site deployment. For Project site, configure _config.yml with url: https://<user>.github.io/<repo>, root: /<repo>/, and relative_link: false. For User/Org site, configure _config.yml with url: https://<user>.github.io, root: /, and relative_link: false. This configuration is critical for proper asset linking.",
-        "testStrategy": "Verify _config.yml contains correct URL and root path settings based on chosen deployment type. Test configuration by running hexo generate and checking generated HTML files for proper asset paths.",
-        "priority": "high",
-        "dependencies": [1],
         "status": "done",
-        "subtasks": []
+        "dependencies": [1],
+        "priority": "high",
+        "details": "Successfully implemented GitHub Pages Project site deployment configuration. Updated _config.yml with url: https://maksimzinovev.github.io/reference and root: /reference/ for project site deployment. Replaced original production domain settings (cheatsheets.zip) with GitHub Pages URL structure. Verified proper asset linking and tested build process successfully. All generated HTML files show correct GitHub Pages URL structure and asset paths.",
+        "testStrategy": "Verify _config.yml contains correct URL and root path settings based on chosen deployment type. Test configuration by running hexo generate and checking generated HTML files for proper asset paths.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Update _config.yml for GitHub Pages Project site deployment",
+            "description": "Configured url: https://maksimzinovev.github.io/reference and root: /reference/ in _config.yml",
+            "status": "completed",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Replace original production domain settings with GitHub Pages URL structure",
+            "description": "Removed cheatsheets.zip domain configuration and implemented GitHub Pages URL structure",
+            "status": "completed",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Verify proper asset linking and test build process",
+            "description": "Confirmed all generated HTML files show correct GitHub Pages URL structure and asset paths",
+            "status": "completed",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
       },
       {
         "id": 3,
@@ -31,7 +59,7 @@
         "testStrategy": "Verify CNAME file exists in source/ directory with correct domain. Confirm _config.yml has appropriate URL settings for custom domain. Test by building locally and checking generated URLs.",
         "priority": "medium",
         "dependencies": [2],
-        "status": "in-progress",
+        "status": "pending",
         "subtasks": []
       },
       {
@@ -43,7 +71,35 @@
         "priority": "high",
         "dependencies": [2],
         "status": "pending",
-        "subtasks": []
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Fix hardcoded domain references in EJS templates",
+            "description": "Update hardcoded 'cheatsheets.zip' references in hero.ejs, footer.ejs, and other EJS template files to use dynamic URL configuration. This includes tooltips, affiliate links, and copyright text.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 2,
+            "title": "Fix hardcoded domain in global.js URL generation",
+            "description": "Update hardcoded 'https://cheatsheets.zip' URL in themes/coo/scripts/global.js line 79 to use dynamic URL configuration. This prevents broken links in generated list.md file.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 3,
+            "title": "Test generated links after domain reference fixes",
+            "description": "After updating hardcoded domain references, run build process and verify all generated URLs in HTML, list.md, and other generated files point to correct GitHub Pages domain structure.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          }
+        ]
       },
       {
         "id": 5,
@@ -114,7 +170,7 @@
     ],
     "metadata": {
       "created": "2025-09-13T22:31:15.692Z",
-      "updated": "2025-09-13T23:03:25.563Z",
+      "updated": "2025-09-13T23:46:24.827Z",
       "description": "Tasks for master context"
     }
   }
