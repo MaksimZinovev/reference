@@ -215,3 +215,99 @@ Theme-specific settings in `themes/coo/_config.yml`:
 - All content is markdown-based for easy editing and contribution
 - The site uses custom EJS templates with Tailwind CSS styling
 - SEO and accessibility are built into the template system
+
+## When you encounter any issues with MCP
+
+`$HOME=/Users/maksim`
+
+- Make sure to check your memory in `$HOME/.claude/CLAUDE.md` to troubleshoot the issue
+- Always output one-line summary explaining the result of checking `$HOME/.claude/CLAUDE.md` to troubleshoot the {issue}:
+  - when found relevant memory, start with "checked, found notes in memory related to {issue}: ... "
+  - when did not find relevant memory, "checked, no notes in memory related to {issue}: ... "
+  - or explain what happened when you tried to read ``$HOME/.claude/CLAUDE.md` to troubleshoot the issue `
+- Next output one-line reasoning and your next planned step.
+
+## Task Master AI CLI - Most Frequently Used Commands
+
+### Installation & Setup Commands
+
+```bash
+# Quick installation check and install if needed
+task-master --version 2>/dev/null || npm install -g task-master-ai
+
+# Initialize project in current directory
+task-master init
+
+# Quick initialization with default confirmations
+task-master init -y
+
+# Check AI provider setup status
+task-master models --status
+
+# Interactive AI model configuration setup
+task-master models --setup
+```
+
+### Daily Development Workflow Commands
+
+```bash
+# List all tasks with status and priorities
+task-master list
+
+# Show next task to work on (considers dependencies and priorities)
+task-master next
+
+# Show detailed information for a specific task
+task-master show <task-id>
+
+# Mark task as complete/done
+task-master set-status --id=<task-id> --status=done
+
+# Add a new task manually
+task-master add-task "Task description here"
+```
+
+### Project Requirements & Task Management Commands
+
+```bash
+# Parse PRD file and generate tasks
+task-master parse-prd requirements.txt
+
+# Parse with specific number of tasks
+task-master parse-prd prd.txt -n 8
+
+# Analyze project complexity
+task-master analyze-complexity
+
+# Research best practices and update tasks
+task-master research "JWT security best practices 2024" --id=5
+
+# Create branch-based task tags
+task-master add-tag --from-branch --description="Feature description"
+```
+
+### MCP Integration Commands (for use within Claude Code)
+
+```bash
+# Natural language task management via MCP
+/project:tm/add-task create user authentication system
+/project:tm/list show blocked tasks
+/project:tm/show 45
+/project:tm/update mark all API tasks as high priority
+
+# Project initialization via MCP
+/project:tm/init/quick
+/project:tm/models/setup
+/project:tm/parse-prd requirements.md
+```
+
+### Proactive Usage Guidelines
+
+- **When users mention project planning**: Run `task-master init` if not initialized, then suggest `task-master parse-prd`
+- **When users discuss task priorities**: Run `task-master list` to show current task state and priorities
+- **When users ask "what's next"**: Run `task-master next` to get the next recommended task
+- **When users complete features**: Run `task-master set-status --status=done` and then `task-master next` for next work item
+- **When starting new features**: Run `task-master add-tag --from-branch` to associate tasks with the current feature branch
+- **When researching solutions**: Use `task-master research` with relevant topics to inform task updates and implementation approaches
+- **When you encounter error running task-master command**: Use @context7 or @github mcp to pull most recent documentation for `github.com/eyaltoledano/claude-task-master` and find solution
+- **When you successfully resolved encounter error running task-master command**: Notify user and add concise instructions (1-2 lines with optional reference) in Claude Code memory file (scope: project) to avoid this error/issue in the future

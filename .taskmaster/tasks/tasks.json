@@ -1,0 +1,121 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository",
+        "description": "Clean and prepare the repository for Hexo project deployment",
+        "details": "Ensure the Hexo project is at the repository root. Create a comprehensive .gitignore file that excludes node_modules, .cache, .hexo, public, and db.json directories. Verify that the npm run build command successfully generates the public/ directory locally. This establishes the foundation for all subsequent deployment tasks.",
+        "testStrategy": "Verify repository structure is correct with Hexo project at root. Confirm .gitignore file exists and contains all specified exclusions. Run npm run build locally and verify public/ directory is generated with expected content.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Configure GitHub Pages Settings",
+        "description": "Set up the appropriate URL configuration based on chosen GitHub Pages type",
+        "details": "Determine whether using Project site or User/Org site deployment. For Project site, configure _config.yml with url: https://<user>.github.io/<repo>, root: /<repo>/, and relative_link: false. For User/Org site, configure _config.yml with url: https://<user>.github.io, root: /, and relative_link: false. This configuration is critical for proper asset linking.",
+        "testStrategy": "Verify _config.yml contains correct URL and root path settings based on chosen deployment type. Test configuration by running hexo generate and checking generated HTML files for proper asset paths.",
+        "priority": "high",
+        "dependencies": [1],
+        "status": "in-progress",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Custom Domain Configuration",
+        "description": "Set up custom domain support for the deployed site",
+        "details": "Create a source/CNAME file containing exactly the custom domain (e.g., cheatsheets.zip). Configure _config.yml with url: https://cheatsheets.zip and root: / for custom domain usage. This task is optional but important for production deployments with custom domains.",
+        "testStrategy": "Verify CNAME file exists in source/ directory with correct domain. Confirm _config.yml has appropriate URL settings for custom domain. Test by building locally and checking generated URLs.",
+        "priority": "medium",
+        "dependencies": [2],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Ensure Theme Path Safety",
+        "description": "Verify all theme assets use path-safe helpers for proper linking",
+        "details": "Review EJS layouts in the theme to ensure all asset links use Hexo helpers: url_for('/css/style.css'), css('/css/style.css'), js('/js/app.js'). This prevents broken paths when root is not set to / and is essential for proper asset loading on GitHub Pages.",
+        "testStrategy": "Inspect theme EJS files to verify all asset links use Hexo helpers. Build the site locally and verify asset paths in generated HTML. Test with different root configurations to ensure path safety.",
+        "priority": "high",
+        "dependencies": [2],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Create GitHub Actions Workflow",
+        "description": "Implement the GitHub Actions workflow for automated deployment",
+        "details": "Create .github/workflows/pages.yml with the specified workflow configuration. The workflow should include build and deploy jobs with proper permissions, Node.js setup, dependency installation, build process, and deployment to GitHub Pages using actions/upload-pages-artifact and actions/deploy-pages.",
+        "testStrategy": "Verify pages.yml file exists with correct configuration. Check that workflow includes all specified steps: checkout, Node.js setup, npm ci, npm run build, artifact upload, and deployment. Validate YAML syntax.",
+        "priority": "high",
+        "dependencies": [1, 4],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Configure GitHub Pages Source",
+        "description": "Set up GitHub Pages to use GitHub Actions as deployment source",
+        "details": "In GitHub repository settings, navigate to Pages section and set Build and deployment Source to GitHub Actions. This enables the automated deployment workflow created in the previous task.",
+        "testStrategy": "Verify in GitHub Settings → Pages that Source is set to GitHub Actions. Confirm no errors in settings configuration.",
+        "priority": "high",
+        "dependencies": [5],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Verify Build Process Configuration",
+        "description": "Ensure all build scripts are properly configured for deployment",
+        "details": "Verify that the build process uses the correct scripts: build:clean, build:css, build:generate, build:gulp. Confirm that Node/Gulp flags are properly configured for memory management. Ensure CI environment with ~7GB RAM is sufficient for the build process.",
+        "testStrategy": "Run all build scripts locally to verify they execute successfully. Check package.json for defined build scripts. Monitor memory usage during local builds to ensure CI environment will be sufficient.",
+        "priority": "medium",
+        "dependencies": [1],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Execute Initial Deployment",
+        "description": "Perform the first deployment and verify site accessibility",
+        "details": "Commit and push all changes to the main branch to trigger the GitHub Actions workflow. Monitor the workflow execution in GitHub Actions. After successful deployment, visit the environment URL shown in the workflow run to verify site accessibility.",
+        "testStrategy": "Confirm workflow runs successfully without errors. Verify deployment URL is accessible. Check that all pages, images, and CSS load correctly. For project sites, confirm content loads under /<repo>/ path.",
+        "priority": "high",
+        "dependencies": [5, 6, 7],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Troubleshoot Deployment Issues",
+        "description": "Identify and fix any deployment issues that arise",
+        "details": "If assets return 404 errors on project sites, double-check _config.yml root configuration and verify that theme uses url_for, css, and js helpers. Re-run npm run build locally to replicate and debug issues. This task addresses common deployment problems.",
+        "testStrategy": "Test local build to replicate any 404 issues. Verify _config.yml settings match deployment type. Confirm all theme assets use proper Hexo helpers. Validate fixes by rebuilding and testing locally before redeploying.",
+        "priority": "medium",
+        "dependencies": [8],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Implement Quality Assurance Workflows",
+        "description": "Set up additional workflows for code quality and dependency management",
+        "details": "Keep npm test, lint, and format as separate workflows that run on pull requests. Optionally add a second job that runs npm audit --omit=dev and npm run deps:check on a scheduled basis. This ensures code quality and dependency security are maintained.",
+        "testStrategy": "Verify separate workflows exist for testing, linting, and formatting on PRs. Confirm workflows execute successfully. For dependency checks, verify scheduled workflow is configured and runs npm audit and deps:check commands.",
+        "priority": "medium",
+        "dependencies": [8],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-09-13T22:31:15.692Z",
+      "updated": "2025-09-13T22:42:13.291Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
