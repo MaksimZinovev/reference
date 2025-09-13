@@ -111,3 +111,6 @@ dev-debug.log
 # Task files
 # tasks.json
 # tasks/ 
+
+# MCP files
+.mcp.json
