@@ -311,3 +311,39 @@ task-master add-tag --from-branch --description="Feature description"
 - **When researching solutions**: Use `task-master research` with relevant topics to inform task updates and implementation approaches
 - **When you encounter error running task-master command**: Use @context7 or @github mcp to pull most recent documentation for `github.com/eyaltoledano/claude-task-master` and find solution
 - **When you successfully resolved encounter error running task-master command**: Notify user and add concise instructions (1-2 lines with optional reference) in Claude Code memory file (scope: project) to avoid this error/issue in the future
+
+## Task Master Integration - Active Task Management
+
+**CRITICAL**: Always use task-master for task tracking and planning workflow:
+
+1. **Start every session** with `task-master list` to check current task status and dependencies
+2. **Update task status immediately** when starting/completing work using `task-master set-status --id=<id> --status=<status>`
+3. **Read all tasks** when starting/completing task to ensure you understand what changes were done previously, what will be next steps and ensure your align them with overall plan and user's expectations. Make sure to raise questions if you noticed potential issues, inconsistencies or ambiguity
+4. **End every session** by updating task status and running `task-master next` to determine next work item
+5. **Notify user immediately** about task inconsistencies, ambiguities, or missing critical details
+6. **Always ask for clarification** when task descriptions are unclear or dependencies seem wrong
+7. **Commit changes after each task completion** - first highlight potential issues (mandatory) or improvements (optional), wait for feedback from user, commit changes if permission is granted
+
+**Goal**: Maintain accurate task tracking and prevent status drift between actual work and task-master records.
+
+## Task Master Integration - Previous Context Management
+
+1. **Always ask for clarification** when task descriptions are unclear or dependencies seem wrong
+2. **When task is done**, always review wording and update it to match actual implementation
+3. **When task is done and updated**, always review dependant and downstream tasks to ensure they are aligned with completed task and consistent.
+4. **When task is done and updated**, always notify user if updates are needed for dependant, downstream task and confirm with user before making changes.
+
+**Goal**: Maintain concise, accurate and helpful information in tasks.json to reflect
+
+1.  task-related decisions and instructions from user
+2.  concise 1-line reasoning (why)
+3.  changes in current task and downstream tasks when they are impacted
+
+## MCP Integration Commands
+
+**Use these without asking** (already allowed in settings.local.json):
+
+- `task-master list`, `task-master show <id>`, `task-master next`
+- `task-master set-status` for status updates
+- `task-master add-task` for new tasks
+- All other task-master commands related to project management

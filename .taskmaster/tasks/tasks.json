@@ -20,7 +20,7 @@
         "testStrategy": "Verify _config.yml contains correct URL and root path settings based on chosen deployment type. Test configuration by running hexo generate and checking generated HTML files for proper asset paths.",
         "priority": "high",
         "dependencies": [1],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -31,7 +31,7 @@
         "testStrategy": "Verify CNAME file exists in source/ directory with correct domain. Confirm _config.yml has appropriate URL settings for custom domain. Test by building locally and checking generated URLs.",
         "priority": "medium",
         "dependencies": [2],
-        "status": "pending",
+        "status": "in-progress",
         "subtasks": []
       },
       {
@@ -114,7 +114,7 @@
     ],
     "metadata": {
       "created": "2025-09-13T22:31:15.692Z",
-      "updated": "2025-09-13T22:42:13.291Z",
+      "updated": "2025-09-13T23:03:25.563Z",
       "description": "Tasks for master context"
     }
   }

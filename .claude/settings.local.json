@@ -39,7 +39,11 @@
       "Bash(npm run build)",
       "Bash(task-master set-status --id=1 --status=done)",
       "Bash(task-master set-status --id=2 --status=in-progress)",
-      "Bash(gh repo view --json name,owner,homepage,isTemplate,hasPages,hasProjects,hasWiki)"
+      "Bash(gh repo view --json name,owner,homepage,isTemplate,hasPages,hasProjects,hasWiki)",
+      "Bash(git checkout -b feature/github-pages-setup)",
+      "Bash(task-master set-status --id=2 --status=done)",
+      "Bash(task-master show 3)",
+      "Bash(task-master set-status --id=3 --status=in-progress)"
     ],
     "deny": [],
     "ask": []
