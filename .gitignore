@@ -117,3 +117,6 @@ dev-debug.log
 
 # Environment files
 .envrc
+
+# Claude AI
+.claude/settings.local.json
