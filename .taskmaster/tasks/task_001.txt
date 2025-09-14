@@ -1,0 +1,11 @@
+# Task ID: 1
+# Title: Setup Project Repository
+# Status: done
+# Dependencies: None
+# Priority: high
+# Description: Clean and prepare the repository for Hexo project deployment
+# Details:
+Ensure the Hexo project is at the repository root. Create a comprehensive .gitignore file that excludes node_modules, .cache, .hexo, public, and db.json directories. Verify that the npm run build command successfully generates the public/ directory locally. This establishes the foundation for all subsequent deployment tasks.
+
+# Test Strategy:
+Verify repository structure is correct with Hexo project at root. Confirm .gitignore file exists and contains all specified exclusions. Run npm run build locally and verify public/ directory is generated with expected content.

@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: Implement Quality Assurance Workflows
+# Status: pending
+# Dependencies: 8
+# Priority: medium
+# Description: Set up additional workflows for code quality and dependency management
+# Details:
+Keep npm test, lint, and format as separate workflows that run on pull requests. Optionally add a second job that runs npm audit --omit=dev and npm run deps:check on a scheduled basis. This ensures code quality and dependency security are maintained.
+
+# Test Strategy:
+Verify separate workflows exist for testing, linting, and formatting on PRs. Confirm workflows execute successfully. For dependency checks, verify scheduled workflow is configured and runs npm audit and deps:check commands.

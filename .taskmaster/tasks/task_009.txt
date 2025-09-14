@@ -1,0 +1,11 @@
+# Task ID: 9
+# Title: Troubleshoot Deployment Issues
+# Status: pending
+# Dependencies: 8
+# Priority: medium
+# Description: Identify and fix any deployment issues that arise
+# Details:
+If assets return 404 errors on project sites, double-check _config.yml root configuration and verify that theme uses url_for, css, and js helpers. Re-run npm run build locally to replicate and debug issues. This task addresses common deployment problems. Refer to detailed analysis in .taskmaster/docs/search-issue-analysis.md for specific search functionality issues.
+
+# Test Strategy:
+Test local build to replicate any 404 issues. Verify _config.yml settings match deployment type. Confirm all theme assets use proper Hexo helpers. Validate fixes by rebuilding and testing locally before redeploying.

@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Implement Custom Domain Configuration
+# Status: cancelled
+# Dependencies: 2
+# Priority: medium
+# Description: Set up custom domain support for the deployed site
+# Details:
+Create a source/CNAME file containing exactly the custom domain (e.g., cheatsheets.zip). Configure _config.yml with url: https://cheatsheets.zip and root: / for custom domain usage. This task is optional but important for production deployments with custom domains.
+
+# Test Strategy:
+Verify CNAME file exists in source/ directory with correct domain. Confirm _config.yml has appropriate URL settings for custom domain. Test by building locally and checking generated URLs.
