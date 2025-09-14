@@ -118,5 +118,8 @@ dev-debug.log
 # Environment files
 .envrc
 
+# Playwright files
+.playwright-mcp
+
 # Claude AI
 .claude/settings.local.json

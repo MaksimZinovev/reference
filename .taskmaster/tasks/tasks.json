@@ -70,14 +70,14 @@
         "testStrategy": "Inspect theme EJS files to verify all asset links use Hexo helpers. Build the site locally and verify asset paths in generated HTML. Test with different root configurations to ensure path safety.",
         "priority": "high",
         "dependencies": [2],
-        "status": "pending",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
             "title": "Fix hardcoded domain references in EJS templates",
             "description": "Update hardcoded 'cheatsheets.zip' references in hero.ejs, footer.ejs, and other EJS template files to use dynamic URL configuration. This includes tooltips, affiliate links, and copyright text.",
             "details": "",
-            "status": "pending",
+            "status": "done",
             "dependencies": [],
             "parentTaskId": 4
           },
@@ -86,7 +86,7 @@
             "title": "Fix hardcoded domain in global.js URL generation",
             "description": "Update hardcoded 'https://cheatsheets.zip' URL in themes/coo/scripts/global.js line 79 to use dynamic URL configuration. This prevents broken links in generated list.md file.",
             "details": "",
-            "status": "pending",
+            "status": "done",
             "dependencies": [],
             "parentTaskId": 4
           },
@@ -95,7 +95,7 @@
             "title": "Test generated links after domain reference fixes",
             "description": "After updating hardcoded domain references, run build process and verify all generated URLs in HTML, list.md, and other generated files point to correct GitHub Pages domain structure.",
             "details": "",
-            "status": "pending",
+            "status": "done",
             "dependencies": [],
             "parentTaskId": 4
           }
@@ -170,7 +170,7 @@
     ],
     "metadata": {
       "created": "2025-09-13T22:31:15.692Z",
-      "updated": "2025-09-14T06:06:23.620Z",
+      "updated": "2025-09-14T06:41:59.148Z",
       "description": "Tasks for master context"
     }
   }

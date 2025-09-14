@@ -29,6 +29,6 @@ Key Features:
 Our team of experts has meticulously crafted this reference to provide instant information. We're committed to evolving
 our content to meet your needs and bring out fascinating upgrades in the future.
 
-Start exploring now and make [https://cheatsheets.zip] your trusted companion in [area/topic]!!
+Start exploring now and make [CheatSheets] your trusted companion in [area/topic]!!
 
-Have feedback or suggestions? Reach out to us at [https://twitter.com/FechinLi].
+Have feedback or suggestions? Reach out to us at [https://x.com/maxfaber_Om].

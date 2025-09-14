@@ -18,7 +18,6 @@ plugins:
 
 > The ultimate reference for mastering Vue 3.
 
-
 ## ⚙️ 1. Setup
 
 ### CDN (Quick Start)
@@ -29,11 +28,12 @@ plugins:
 <script>
   Vue.createApp({
     data() {
-      return { message: "Hello Vue!" };
+      return { message: 'Hello Vue!' };
     }
-  }).mount("#app");
+  }).mount('#app');
 </script>
 ```
+
 ### Vite + Vue
 
 ```bash
@@ -42,7 +42,6 @@ cd my-vue-app
 npm install
 npm run dev
 ```
-
 
 ## 🧠 2. App Structure
 
@@ -53,7 +52,6 @@ src/
 ├─ App.vue
 ├─ main.js
 ```
-
 
 ## 📦 3. Data, Methods, Template
 
@@ -75,7 +73,6 @@ methods: {
 <h1>{{ message }}</h1>
 <button @click="increment">+</button>
 ```
-
 
 ## 🧰 4. Directives
 
@@ -99,7 +96,6 @@ methods: {
 </ul>
 ```
 
-
 ## 🪝 5. Lifecycle Hooks
 
 ```js
@@ -109,14 +105,11 @@ updated() {},
 unmounted() {}
 ```
 
-
 ## 🎯 6. Events
 
 ```html
-<button @click="sayHi">Click</button>
-<input @keyup.enter="submit" />
+<button @click="sayHi">Click</button> <input @keyup.enter="submit" />
 ```
-
 
 ## 🔁 7. Computed & Watch
 
@@ -133,14 +126,13 @@ watch: {
 }
 ```
 
-
 ## 🧱 8. Components
 
 ### Register + Use
 
 ```js
-app.component("Greeting", {
-  props: ["name"],
+app.component('Greeting', {
+  props: ['name'],
   template: `<h1>Hello, {{ name }}!</h1>`
 });
 ```
@@ -148,7 +140,6 @@ app.component("Greeting", {
 ```html
 <Greeting name="Sumangal" />
 ```
-
 
 ## 🔗 9. Props & Emits
 
@@ -167,9 +158,8 @@ props: {
 ### Emit
 
 ```js
-this.$emit("custom-event", payload);
+this.$emit('custom-event', payload);
 ```
-
 
 ## 🔄 10. v-model with Components
 
@@ -185,11 +175,10 @@ emits: ['update:modelValue']
 />
 ```
 
-
 ## ⚒ 11. Composition API
 
 ```js
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue';
 
 export default {
   setup() {
@@ -203,7 +192,6 @@ export default {
 };
 ```
 
-
 ## 🌐 12. Vue Router
 
 ```bash
@@ -213,13 +201,13 @@ npm install vue-router
 ### router.js
 
 ```js
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from './views/Home.vue';
+import About from './views/About.vue';
 
 const routes = [
-  { path: "/", component: Home },
-  { path: "/about", component: About }
+  { path: '/', component: Home },
+  { path: '/about', component: About }
 ];
 
 export default createRouter({
@@ -231,14 +219,13 @@ export default createRouter({
 ### main.js
 
 ```js
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
 const app = createApp(App);
-app.use(router).mount("#app");
+app.use(router).mount('#app');
 ```
-
 
 ## 📦 13. Pinia (Vuex Alternative)
 
@@ -249,9 +236,9 @@ npm install pinia
 ### store/counter.js
 
 ```js
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 
-export const useCounterStore = defineStore("counter", {
+export const useCounterStore = defineStore('counter', {
   state: () => ({ count: 0 }),
   actions: {
     increment() {
@@ -266,7 +253,6 @@ const counter = useCounterStore();
 counter.increment();
 ```
 
-
 ## 🎨 14. Slots
 
 ```html
@@ -280,7 +266,6 @@ counter.increment();
 <slot :user="user"></slot>
 ```
 
-
 ## 🧪 15. Testing
 
 ### Vitest + Vue Test Utils
@@ -290,36 +275,32 @@ npm install vitest @vue/test-utils
 ```
 
 ```js
-import { mount } from "@vue/test-utils";
-import MyComponent from "@/components/MyComponent.vue";
+import { mount } from '@vue/test-utils';
+import MyComponent from '@/components/MyComponent.vue';
 
-test("renders", () => {
+test('renders', () => {
   const wrapper = mount(MyComponent);
-  expect(wrapper.text()).toContain("Hello");
+  expect(wrapper.text()).toContain('Hello');
 });
 ```
 
-
 ## 🧼 16. Best Practices
 
-* Use `ref()` for primitives, `reactive()` for objects
-* Use `<script setup>` syntax in SFCs
-* Break UI into small, reusable components
-* Always define `key` in `v-for`
-* Use slots for flexible composition
-
+- Use `ref()` for primitives, `reactive()` for objects
+- Use `<script setup>` syntax in SFCs
+- Break UI into small, reusable components
+- Always define `key` in `v-for`
+- Use slots for flexible composition
 
 ## 🛠 17. Dev Tools
 
-* 🧩 [Vue DevTools](https://devtools.vuejs.org/)
-* 🧠 [Volar](https://github.com/vuejs/language-tools) for VSCode
-* ⚡ [Vite](https://vitejs.dev) for fast dev environment
-
+- 🧩 [Vue DevTools](https://devtools.vuejs.org/)
+- 🧠 [Volar](https://github.com/vuejs/language-tools) for VSCode
+- ⚡ [Vite](https://vitejs.dev) for fast dev environment
 
 ## 📚 18. Official Resources
 
-* 📘 [Vue Docs](https://vuejs.org)
-* 🧭 [Router Docs](https://router.vuejs.org)
-* 📦 [Pinia Docs](https://pinia.vuejs.org)
-* 🧪 [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html)
-
+- 📘 [Vue Docs](https://vuejs.org)
+- 🧭 [Router Docs](https://router.vuejs.org)
+- 📦 [Pinia Docs](https://pinia.vuejs.org)
+- 🧪 [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html)

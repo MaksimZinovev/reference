@@ -28,6 +28,9 @@ Review checklist:
 - Task requirements fully addressed
 - Code follows project standards in CLAUDE.md
 - Proper documentation updated and file structure correct
+- Read @package.json and executed relevant commands to check, test the recent changes to ensure everything is working correct
+- Resolved all linting errors
+- Resolved all formatting errors
 - No regression issues introduced
 
 Provide feedback organized by priority:
