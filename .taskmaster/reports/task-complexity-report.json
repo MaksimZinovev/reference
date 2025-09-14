@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "generatedAt": "2025-09-14T02:34:52.558Z",
+    "tasksAnalyzed": 8,
+    "totalTasks": 10,
+    "analysisCount": 8,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 3,
+      "taskTitle": "Implement Custom Domain Configuration",
+      "complexityScore": 3,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the custom domain setup into file creation, configuration updates, and verification steps",
+      "reasoning": "This task involves creating a CNAME file and updating configuration settings. It's straightforward but requires careful attention to file placement and YAML formatting. Breaking it into subtasks ensures proper verification of each component."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Implement Quality Assurance Workflows",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Separate the QA workflows into testing, linting, formatting, and dependency security components",
+      "reasoning": "This task requires creating multiple GitHub Actions workflows with different triggers and schedules. It involves understanding workflow syntax, scheduling configurations, and ensuring proper command execution. Multiple subtasks help organize the different workflow types."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Create GitHub Actions Workflow",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Divide the workflow creation into setup, build, deployment, permissions, and validation components",
+      "reasoning": "Creating a comprehensive GitHub Actions workflow requires careful configuration of multiple jobs, proper permissions, artifact handling, and deployment steps. The YAML structure must be precise and the workflow needs thorough validation, warranting detailed subtask breakdown."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Ensure Theme Path Safety",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down this task with a focus on ensure theme path safety.",
+      "reasoning": "Automatically added due to missing analysis in AI response."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Configure GitHub Pages Source",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down this task with a focus on configure github pages source.",
+      "reasoning": "Automatically added due to missing analysis in AI response."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Verify Build Process Configuration",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down this task with a focus on verify build process configuration.",
+      "reasoning": "Automatically added due to missing analysis in AI response."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Execute Initial Deployment",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down this task with a focus on execute initial deployment.",
+      "reasoning": "Automatically added due to missing analysis in AI response."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Troubleshoot Deployment Issues",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down this task with a focus on troubleshoot deployment issues.",
+      "reasoning": "Automatically added due to missing analysis in AI response."
+    }
+  ]
+}

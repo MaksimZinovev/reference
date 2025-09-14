@@ -335,9 +335,18 @@ task-master add-tag --from-branch --description="Feature description"
 
 **Goal**: Maintain concise, accurate and helpful information in tasks.json to reflect
 
-1.  task-related decisions and instructions from user
-2.  concise 1-line reasoning (why)
-3.  changes in current task and downstream tasks when they are impacted
+1. task-related decisions and instructions from user
+2. concise 1-line reasoning (why)
+3. changes in current task and downstream tasks when they are impacted
+
+## ## Task Master Integration - Valid Task Status Values
+
+- "pending": Ready to work on
+- "in-progress": Currently being worked on
+- "done": Completed and verified
+- "review": Awaiting review
+- "deferred": Postponed
+- "cancelled": No longer needed ← This is what we need!
 
 ## MCP Integration Commands
 
