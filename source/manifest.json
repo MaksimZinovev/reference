@@ -2,7 +2,7 @@
   "name": "CheatSheets.zip - Ultimate Cheat Sheets for Developers",
   "short_name": "CheatSheets",
   "description": "Share quick reference and cheat sheet for developers",
-  "start_url": "/",
+  "start_url": "/reference/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#6366f1",

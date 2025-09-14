@@ -557,11 +557,18 @@ window.addEventListener('load', () => {
 
   /******** Search ***********/
   function SearchEngine(options) {
+    const configuredRoot =
+      window?.themeConfig?.root ||
+      document.querySelector('meta[name="root"]')?.getAttribute('content');
+
+    // Fallback: derive the directory path from current location
+    const basePath = configuredRoot ?? window.location.pathname.replace(/\/[^/]*$/, '/');
+    Utils.LIBRARY.fuse.lib = [`${basePath}js/fuse_7.1.0.js`];
     const settings = options ? options : {};
     const defaultOptions = {
       trigger: '#mysearch-trigger',
       container: '#mysearch',
-      dbPath: `${location.protocol}//${location.host}/search.json?v=1.0`
+      dbPath: `${window.location.protocol}//${window.location.host}${basePath}search.json?v=1.0`
     };
     this.container =
       typeof settings.container !== 'undefined' ? settings.container : defaultOptions.container;
