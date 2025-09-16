@@ -66,11 +66,11 @@
         "id": 4,
         "title": "Ensure Theme Path Safety",
         "description": "Verify all theme assets use path-safe helpers for proper linking",
-        "details": "Review EJS layouts in the theme to ensure all asset links use Hexo helpers: url_for('/css/style.css'), css('/css/style.css'), js('/js/app.js'). This prevents broken paths when root is not set to / and is essential for proper asset loading on GitHub Pages. Additional work identified to fix search functionality path issues related to subdirectory deployment configuration.",
+        "details": "Review EJS layouts in the theme to ensure all asset links use Hexo helpers: url_for('/css/style.css'), css('/css/style.css'), js('/js/app.js'). This prevents broken paths when root is not set to / and is essential for proper asset loading on GitHub Pages. Additional work identified to fix search functionality path issues related to subdirectory deployment configuration.  Two separate YAML configurations are used: Local development configuration (_config.yml) with url: https://cheatsheets.zip and root: / - used for local development server. GitHub Pages configuration (_config.github.yml) with url: https://maksimzinovev.github.io/reference and root: /reference/ used for production builds. The build process merges both configurations with npx hexo generate --config _config.yml, _config.github.yml, allowing proper deployment to GitHub Pages while maintaining local development capabilities.",
         "testStrategy": "Inspect theme EJS files to verify all asset links use Hexo helpers. Build the site locally and verify asset paths in generated HTML. Test with different root configurations to ensure path safety. Verify search functionality works correctly with subdirectory configuration.",
         "priority": "high",
         "dependencies": [2],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
@@ -104,7 +104,7 @@
             "title": "Fix search functionality path issue with subdirectory deployment",
             "description": "Update JavaScript search implementation to respect site root configuration when constructing search.json path. See detailed analysis in .taskmaster/docs/search-issue-analysis.md",
             "details": "JavaScript code in main.js constructs search path incorrectly when site is configured with subdirectory root. Currently looks for /search.json but with root: /reference/, file is generated at /reference/search.json. Need to update path construction to respect hexo config root setting.",
-            "status": "pending",
+            "status": "done",
             "dependencies": [],
             "parentTaskId": 4
           },
@@ -113,7 +113,7 @@
             "title": "Verify all asset paths use Hexo helpers for path safety",
             "description": "Conduct thorough review of all theme assets to ensure they use Hexo path helpers rather than hardcoded paths to ensure compatibility with subdirectory deployments.",
             "details": "Review all EJS templates and JavaScript files to ensure path construction respects the site's root configuration. This includes CSS, JS, image assets, and any dynamically generated paths.",
-            "status": "pending",
+            "status": "done",
             "dependencies": [4],
             "parentTaskId": 4
           }
@@ -188,7 +188,7 @@
     ],
     "metadata": {
       "created": "2025-09-13T22:31:15.692Z",
-      "updated": "2025-09-14T07:00:00.000Z",
+      "updated": "2025-09-16T11:06:49.941Z",
       "description": "Tasks for master context"
     }
   }

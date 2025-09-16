@@ -1,3 +1,18 @@
+---
+status: resolved
+date_updated: 2025-09-16
+comments: 'All search functionality issues have been successfully resolved. The search path construction in main.js now properly uses the basePath variable to handle subdirectory deployments. All hardcoded domain references have been removed from EJS templates and JavaScript files. All asset paths now use Hexo helpers for proper path resolution.'
+---
+
+# Configuration Management Note
+
+**Important**: Two separate YAML configurations are used for different deployment targets:
+
+1. Local development configuration (`_config.yml`) with `url: https://cheatsheets.zip` and `root: /` - used for local development server
+2. GitHub Pages configuration (`_config.github.yml`) with `url: https://maksimzinovev.github.io/reference` and `root: /reference/` - used for production builds
+
+The build process merges both configurations with `npx hexo generate --config _config.yml,_config.github.yml`, allowing proper deployment to GitHub Pages while maintaining local development capabilities.
+
 # Search Functionality Issue Analysis
 
 ## Problem Summary

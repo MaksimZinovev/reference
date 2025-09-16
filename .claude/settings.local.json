@@ -64,7 +64,11 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Configure GitHub Pages Project site deployment with URL structure\n\nUpdated _config.yml for GitHub Pages Project site deployment with url: \nhttps://maksimzinovev.github.io/reference and root: /reference/ instead of \noriginal production domain settings. Removed cheatsheets.zip domain configuration \nand implemented GitHub Pages URL structure.\n\nVerified proper asset linking and tested build process successfully. All generated \nHTML files show correct GitHub Pages URL structure and asset paths.\n\nCreated subtasks in task 4 to address hardcoded domain references in EJS \ntemplates and JavaScript files for complete URL migration.\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(task-master set-status --id=3 --status=cancelled)",
       "Bash(lsof -i :4000)",
-      "Bash(kill -9 75226)"
+      "Bash(kill -9 75226)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run format:check)",
+      "Bash(npm run test)",
+      "Bash(task-master set-status:*)"
     ],
     "deny": [],
     "ask": []
