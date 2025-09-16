@@ -12,13 +12,12 @@ plugins:
   - copyCode
 ---
 
-
 ## Getting Started
 
 ### Basic {.col-span-3}
 
 | CMD        | Description                                                 |
-|:-----------|:------------------------------------------------------------|
+| :--------- | :---------------------------------------------------------- |
 | `cls`      | Clears the content of the screen.                           |
 | `echo`     | Displays messages or enables/disables command echoing.      |
 | `help`     | Provides help information for Windows commands.             |
@@ -40,12 +39,12 @@ plugins:
 | `tasklist` | Displays all currently running tasks including services.    |
 | `taskkill` | Ends one or more tasks or processes.                        |
 
-## Manage file : 
+## Manage file :
 
 ### File {.col-span-3}
 
 | CMD        | Description                                                       |
-|:-----------|:------------------------------------------------------------------|
+| :--------- | :---------------------------------------------------------------- |
 | `attrib`   | Displays or changes file attributes.                              |
 | `fc`       | Compares two files and displays the differences between them.     |
 | `find`     | Searches for a text string in a file or files.                    |
@@ -67,13 +66,12 @@ plugins:
 | `label`    | Creates, changes, or deletes the volume label of a disk.          |
 | `recover`  | Recovers readable information from a bad or defective disk.       |
 
-
 ## System & Network
 
 ### System {.col-span-3}
 
 | CMD           | Description                                                                               |
-|:--------------|:------------------------------------------------------------------------------------------|
+| :------------ | :---------------------------------------------------------------------------------------- |
 | `systeminfo`  | Displays detailed configuration information about a computer and its operating system.    |
 | `driverquery` | Displays current device driver status and properties.                                     |
 | `msinfo32`    | Starts the System Information tool.                                                       |
@@ -97,63 +95,63 @@ plugins:
 
 ### Network {.col-span-3}
 
-| CMD              | Description                                                                                                                                               |
-|:-----------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `ipconfig`       | Displays all current TCP/IP network configuration values.                                                                                                 |
-| `ping`           | Tests network connectivity to a specified host.                                                                                                           |
-| `tracert`        | Traces the route taken by packets to a specified destination.                                                                                             |
-| `netstat`        | Displays active TCP connections, ports on which the computer is listening.                                                                                |
-| `nslookup`       | Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.                                                                |
-| `net`            | Manages network resources, services, and user accounts.                                                                                                   |
-| `netsh`          | Network Shell, used to configure and monitor network devices.                                                                                             |
-| `arp`            | Displays and modifies the IP-to-Physical address translation tables used by the Address Resolution Protocol (ARP).                                        |
-| `route`          | Displays and modifies the entries in the local IP routing table.                                                                                          |
-| `ftp`            | Starts the File Transfer Protocol (FTP) client.                                                                                                           |
-| `telnet`         | Starts the Telnet client.                                                                                                                                 |
-| `nbtstat`        | Displays protocol statistics and current TCP/IP connections using NBT (NetBIOS over TCP/IP).                                                              |
-| `netuse`         | Displays information about network connections.                                                                                                           |
-| `net session`    | Manages server computer connections.                                                                                                                      |
-| `net start`      | Starts a network service.                                                                                                                                 |
-| `net stop`       | Stops a network service.                                                                                                                                  |
-| `net view`       | Displays a list of resources being shared on a specified computer.                                                                                        |
-| `net user`       | Manages user accounts.                                                                                                                                    |
-| `net localgroup` | Manages local groups.                                                                                                                                     |
-| `net share`      | Manages shared resources.                                                                                                                                 |
-| `net statistics` | Displays network statistics.                                                                                                                              |
+| CMD              | Description                                                                                                        |
+| :--------------- | :----------------------------------------------------------------------------------------------------------------- |
+| `ipconfig`       | Displays all current TCP/IP network configuration values.                                                          |
+| `ping`           | Tests network connectivity to a specified host.                                                                    |
+| `tracert`        | Traces the route taken by packets to a specified destination.                                                      |
+| `netstat`        | Displays active TCP connections, ports on which the computer is listening.                                         |
+| `nslookup`       | Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.                         |
+| `net`            | Manages network resources, services, and user accounts.                                                            |
+| `netsh`          | Network Shell, used to configure and monitor network devices.                                                      |
+| `arp`            | Displays and modifies the IP-to-Physical address translation tables used by the Address Resolution Protocol (ARP). |
+| `route`          | Displays and modifies the entries in the local IP routing table.                                                   |
+| `ftp`            | Starts the File Transfer Protocol (FTP) client.                                                                    |
+| `telnet`         | Starts the Telnet client.                                                                                          |
+| `nbtstat`        | Displays protocol statistics and current TCP/IP connections using NBT (NetBIOS over TCP/IP).                       |
+| `netuse`         | Displays information about network connections.                                                                    |
+| `net session`    | Manages server computer connections.                                                                               |
+| `net start`      | Starts a network service.                                                                                          |
+| `net stop`       | Stops a network service.                                                                                           |
+| `net view`       | Displays a list of resources being shared on a specified computer.                                                 |
+| `net user`       | Manages user accounts.                                                                                             |
+| `net localgroup` | Manages local groups.                                                                                              |
+| `net share`      | Manages shared resources.                                                                                          |
+| `net statistics` | Displays network statistics.                                                                                       |
 
 ## Miscellaneouss
 
 ### Process Management {.col-span-1}
 
 | CMD            | Description                                                  |
-|:---------------|:-------------------------------------------------------------| 
+| :------------- | :----------------------------------------------------------- |
 | `wmic process` | Manages processes using Windows Management Instrumentation . |
 | `timeout`      | Waits for specified number of seconds / until a key pressed. |
 
 ### Disk Management {.col-span-1}
 
-| CMD Command  | Description                         |
-|:-------------|:------------------------------------|
-| `diskpart`   | Manages disk partitions.            |
-| `defrag`     | Defragments a disk.                 |
-| `convert`    | Converts a FAT volume to NTFS.      |
-| `diskperf`   | Manages disk performance counters.  |
+| CMD Command | Description                        |
+| :---------- | :--------------------------------- |
+| `diskpart`  | Manages disk partitions.           |
+| `defrag`    | Defragments a disk.                |
+| `convert`   | Converts a FAT volume to NTFS.     |
+| `diskperf`  | Manages disk performance counters. |
 
 ### System Configuration {.col-span-1}
 
-| CMD Command  | Description                                             |
-|:-------------|:--------------------------------------------------------|
-| `bcdedit`    | Manages the Boot Configuration Data (BCD) store.        |
-| `bootcfg`    | Configures, queries, or changes Boot.ini file settings. |
-| `msconfig`   | Starts the System Configuration utility.                |
-| `regedit`    | Starts the Registry Editor.                             |
+| CMD Command | Description                                             |
+| :---------- | :------------------------------------------------------ |
+| `bcdedit`   | Manages the Boot Configuration Data (BCD) store.        |
+| `bootcfg`   | Configures, queries, or changes Boot.ini file settings. |
+| `msconfig`  | Starts the System Configuration utility.                |
+| `regedit`   | Starts the Registry Editor.                             |
 
 ## Tips & Tricks
 
 ### Miscellaneouss Tips & Tricks {.col-span-3}
 
 | Tip or Trick                                                    | Description                                                                                                                                      |
-|:----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| :-------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `wmic path SoftwareLicensingService get OA3xOriginalProductKey` | Get your Windows Product key                                                                                                                     |
 | `cmd /k`                                                        | Opens the command prompt and executes a specified command, keeping the window open.                                                              |
 | `cmd /c`                                                        | Opens the command prompt, executes a specified command, and then closes the window.                                                              |
@@ -161,7 +159,7 @@ plugins:
 | `\|\|`                                                          | Allows you to run a second command only if the first command fails. For example, `command1 `\|\|`  command2`.                                    |
 | `>`                                                             | Redirects the output of a command to a file, overwriting the file if it already exists. For example, `command > output.txt`.                     |
 | `>>`                                                            | Redirects the output of a command to a file, appending the output if the file already exists. For example, `command >> output.txt`.              |
-| `\|`                                                            | Pipes the output of one command to another command. For example, `command1 `\|` command2`.                                                       | 
+| `\|`                                                            | Pipes the output of one command to another command. For example, `command1 `\|` command2`.                                                       |
 | `clip`                                                          | Redirects the output of a command to the Windows clipboard. For example, `dir `\|`  clip`.                                                       |
 | `for %i in (*.txt) do echo %i`                                  | Loops through all `.txt` files in the current directory and echoes their names.                                                                  |
 | `pushd` and `popd`                                              | `pushd` saves the current directory and then changes to a new directory. `popd` returns to the saved directory.                                  |
@@ -193,7 +191,6 @@ plugins:
 | `bootrec /fixboot`                                              | Writes a new boot sector to the system partition.                                                                                                |
 | `bootrec /scanos`                                               | Scans for installations compatible with Windows and displays the entries that are currently not in the Boot Configuration Data store.            |
 | `bootrec /rebuildbcd`                                           | Scans for installations compatible with Windows and allows you to select the installations you want to add to the Boot Configuration Data store. |
-
 
 ## Other
 

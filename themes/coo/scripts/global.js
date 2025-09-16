@@ -76,7 +76,7 @@ hexo.extend.generator.register('list', (locals) => {
     const categoryData = locals.categories.findOne({ name: category });
     if (categoryData && categoryData.posts) {
       categoryData.posts.sort('-date').map((post) => {
-        content += `- [${post.title}](https://cheatsheets.zip/${post.path}): ${post.intro.trim()}\n`;
+        content += `- [${post.title}](${post.path}): ${post.intro.trim()}\n`;
       });
     } else {
       content += `No posts found in category: ${category}\n`;

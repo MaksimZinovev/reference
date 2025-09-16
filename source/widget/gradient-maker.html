@@ -1,27 +1,43 @@
-<body class="bg-gray-500 flex flex-col items-center justify-center min-h-screen p-4">
+<body class="flex min-h-screen flex-col items-center justify-center bg-gray-500 p-4">
   <!-- Color pickers -->
-  <div class="flex space-x-4 mb-6 items-center justify-center">
+  <div class="mb-6 flex items-center justify-center space-x-4">
     <div class="flex flex-col items-center">
       <label class="mb-2 font-medium" for="color1">Color 1</label>
-      <input type="color" id="color1" value="#ff7e5f" class="w-16 h-16 border-2 border-gray-300 rounded-full cursor-pointer"/>
+      <input
+        type="color"
+        id="color1"
+        value="#ff7e5f"
+        class="h-16 w-16 cursor-pointer rounded-full border-2 border-gray-300"
+      />
     </div>
     <div class="flex flex-col items-center">
       <label class="mb-2 font-medium" for="color2">Color 2</label>
-      <input type="color" id="color2" value="#feb47b" class="w-16 h-16 border-2 border-gray-300 rounded-full cursor-pointer"/>
+      <input
+        type="color"
+        id="color2"
+        value="#feb47b"
+        class="h-16 w-16 cursor-pointer rounded-full border-2 border-gray-300"
+      />
     </div>
   </div>
 
   <!-- Gradient display -->
-  <div class="flex justify-center w-full">
-    <div id="gradientBox" class="w-full max-w-xl h-64 rounded-lg shadow-lg border border-gray-300" style="background: linear-gradient(to right, #ff7e5f, #8000ff);"></div>
+  <div class="flex w-full justify-center">
+    <div
+      id="gradientBox"
+      class="h-64 w-full max-w-xl rounded-lg border border-gray-300 shadow-lg"
+      style="background: linear-gradient(to right, #ff7e5f, #8000ff)"
+    ></div>
   </div>
 
   <!-- CSS code display -->
-  <div class="flex justify-center w-full mt-5 mb-4">
-    <div class="mt-5 w-full max-w-xl bg-gray-500 p-4 rounded-lg shadow-inner">
+  <div class="mb-4 mt-5 flex w-full justify-center">
+    <div class="mt-5 w-full max-w-xl rounded-lg bg-gray-500 p-4 shadow-inner">
       <div>
-        <h2 class="text-lg font-semibold mb-2 text-white text-center">CSS Code</h2>
-        <pre id="cssCode" class="p-2 rounded overflow-x-auto text-neutral-900 bg-gray-100">background: linear-gradient(to right,  #ff7e5f, #8000ff);</pre>
+        <h2 class="mb-2 text-center text-lg font-semibold text-white">CSS Code</h2>
+        <pre id="cssCode" class="overflow-x-auto rounded bg-gray-100 p-2 text-neutral-900">
+background: linear-gradient(to right,  #ff7e5f, #8000ff);</pre
+        >
       </div>
     </div>
   </div>

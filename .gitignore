@@ -115,5 +115,11 @@ dev-debug.log
 # MCP files
 .mcp.json
 
-# Claude
+# Environment files
+.envrc
+
+# Playwright files
+.playwright-mcp
+
+# Claude AI
 .claude/settings.local.json

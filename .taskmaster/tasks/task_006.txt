@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: Configure GitHub Pages Source
+# Status: pending
+# Dependencies: 5
+# Priority: high
+# Description: Set up GitHub Pages to use GitHub Actions as deployment source
+# Details:
+In GitHub repository settings, navigate to Pages section and set Build and deployment Source to GitHub Actions. This enables the automated deployment workflow created in the previous task.
+
+# Test Strategy:
+Verify in GitHub Settings → Pages that Source is set to GitHub Actions. Confirm no errors in settings configuration.
