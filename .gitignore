@@ -59,7 +59,6 @@ coverage/
 .fusebox/
 .dynamodb/
 .tern-port
-package-lock.json
 
 # Testing #
 ######################
