@@ -138,7 +138,7 @@
         "testStrategy": "Verify in GitHub Settings → Pages that Source is set to GitHub Actions. Confirm no errors in settings configuration.",
         "priority": "high",
         "dependencies": [5],
-        "status": "cancelled",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -160,7 +160,7 @@
         "testStrategy": "Confirm workflow runs successfully without errors. Verify deployment URL is accessible. Check that all pages, images, and CSS load correctly. For project sites, confirm content loads under /<repo>/ path.",
         "priority": "high",
         "dependencies": [5, 6, 7],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -171,7 +171,7 @@
         "testStrategy": "Test local build to replicate any 404 issues. Verify _config.yml settings match deployment type. Confirm all theme assets use proper Hexo helpers. Validate fixes by rebuilding and testing locally before redeploying.",
         "priority": "medium",
         "dependencies": [8],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -199,7 +199,7 @@
     ],
     "metadata": {
       "created": "2025-09-13T22:31:15.692Z",
-      "updated": "2025-09-20T03:42:30.423Z",
+      "updated": "2025-09-20T04:05:24.886Z",
       "description": "Tasks for master context"
     }
   }
