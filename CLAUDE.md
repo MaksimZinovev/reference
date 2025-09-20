@@ -348,6 +348,10 @@ task-master add-tag --from-branch --description="Feature description"
 - "deferred": Postponed
 - "cancelled": No longer needed ← This is what we need!
 
+## Session Memory
+
+**Reference deployment troubleshooting**: `.claude/CLAUDE_DEPLOYMENT_TROUBLESHOOTING_MEMORY.md`
+
 ## MCP Integration Commands
 
 **Use these without asking** (already allowed in settings.local.json):

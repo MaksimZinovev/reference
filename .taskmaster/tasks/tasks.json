@@ -161,7 +161,62 @@
         "priority": "high",
         "dependencies": [5, 6, 7],
         "status": "done",
-        "subtasks": []
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Commit and Push Changes to Trigger Deployment",
+            "description": "Commit all final changes and push to the main branch to trigger the GitHub Actions deployment workflow",
+            "dependencies": [],
+            "details": "Ensure all necessary files are committed. Create a descriptive commit message for the initial deployment. Push changes to the main branch to trigger the automated deployment workflow.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Monitor GitHub Actions Workflow Execution",
+            "description": "Track the deployment workflow execution in GitHub Actions to ensure it completes successfully",
+            "dependencies": ["8.1"],
+            "details": "Navigate to the Actions tab in the GitHub repository. Monitor the workflow execution for any errors or failures. Check each step of the deployment process for successful completion.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Verify Site Accessibility",
+            "description": "After successful deployment, visit the environment URL to verify the site is accessible and functioning correctly",
+            "dependencies": ["8.2"],
+            "details": "Use the environment URL provided in the workflow run to access the deployed site. Verify that all pages load correctly. Check that images, CSS, and other assets are properly loaded. For project sites, confirm content loads under the /<repo>/ path.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Investigate 404 errors for deployed pages",
+            "description": "Investigate 404 errors when clicking links on main page. Found that direct URLs work (e.g., https://maksimzinovev.github.io/reference/dspy-py-cheatsheet.html returns HTTP 200), but main page navigation links have incorrect double /reference paths (e.g., /reference/reference/dspy-py-cheatsheet.html returns 404). Confirmed via Playwright MCP investigation that the issue is in link generation, not file existence or deployment.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 8
+          },
+          {
+            "id": 5,
+            "title": "Identify link generation root cause in Hexo templates",
+            "description": "Identify where in Hexo templates or configuration the incorrect double /reference paths are being generated. Need to examine theme layouts (EJS files), Hexo configuration, and permalink settings to understand why main page navigation links have double /reference/ instead of single /reference/ paths. This affects category section links while direct URL access works correctly.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 8
+          },
+          {
+            "id": 6,
+            "title": "Fix double /reference path in link generation",
+            "description": "Fix the double /reference path issue in Hexo templates or configuration. Update theme layouts (EJS files), Hexo permalink settings, or URL generation helpers to ensure all links use single /reference/ paths consistently. Test fix by building locally and verifying generated links work correctly for both direct URL access and main page navigation.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 8
+          }
+        ]
       },
       {
         "id": 9,
@@ -199,7 +254,7 @@
     ],
     "metadata": {
       "created": "2025-09-13T22:31:15.692Z",
-      "updated": "2025-09-20T04:05:24.886Z",
+      "updated": "2025-09-20T04:12:24.134Z",
       "description": "Tasks for master context"
     }
   }
