@@ -1,0 +1,63 @@
+name: Claude Code
+
+# Trigger events for Claude Code integration
+on:
+  # New comments on issues or PRs
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  # New issues created or assigned
+  issues:
+    types: [opened, assigned]
+  # PR reviews submitted
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  claude:
+    # Only run if @claude is mentioned in the interaction
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allow Claude to modify code
+      pull-requests: write # Allow Claude to create/update PRs
+      issues: write # Allow Claude to manage issues
+      id-token: write # Allow OIDC token access
+      actions: read # Allow reading CI results for PRs
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1 # Shallow clone for speed
+
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          # Optional: Customize the trigger phrase (default: @claude)
+          # trigger_phrase: "/claude"
+
+          # Optional: Trigger when specific user is assigned to an issue
+          # assignee_trigger: "claude-bot"
+
+          # Optional: Configure Claude's behavior with CLI arguments
+          # claude_args: |
+          #   --model claude-3-5-sonnet-20241022
+          #   --max-turns 10
+          #   --allowedTools "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*)"
+          #   --system-prompt "This is a Hexo documentation site for development cheat sheets. Follow existing conventions and ensure all changes maintain compatibility with the GitHub Pages deployment process."
+
+          # Optional: Advanced settings configuration
+          # settings: |
+          #   {
+          #     "env": {
+          #       "NODE_ENV": "production"
+          #     }
+          #   }
