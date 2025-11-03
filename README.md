@@ -388,6 +388,11 @@ file should include a front matter section with the following format:
 5. Add plugins in frontmatter if needed, .e.g. `copyCode`
 6. Add footer, see example below
 
+## Contributor Quick Guides
+
+- [TOC Links Guide](docs/README_toc.md) – How to add a Table of Contents with working anchor fragments.
+- [Icon SVG Guide](docs/README_icon.md) – How to add per-post SVG icons matching the slug.
+
 <details>
 
 Frontmatter:
