@@ -473,7 +473,11 @@ When adding or removing cheat sheets, follow these steps to keep the site workin
   <img src="https://contrib.rocks/image?repo=Fechin/reference" />
 </a>
 
-## 🐦 Follow us on Twitter
+## Excluding Draft Raw Files
+
+Draft or scratch markdown files placed in `source/raw/` are kept out of the site by adding `published: false` front matter. See detailed options (front matter vs skip_render vs filter removal) in [`docs/README_exclude_raw.md`](docs/README_exclude_raw.md).
+
+## �🐦 Follow us on Twitter
 
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/FechinLi?color=%234a99e9&style=for-the-badge)](https://x.com/maxfaber_Om)
 
