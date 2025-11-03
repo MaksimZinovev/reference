@@ -462,6 +462,7 @@ When adding or removing cheat sheets, follow these steps to keep the site workin
 - Every slug in `index_recommends` must exist as a `.md` file in `source/_posts/`
 - Every category in `index_categories` must be used by at least one post
 - The site has null checks to prevent total breakage, but unused categories show "no posts"
+- All `.md` file in `source/_posts/` use custom markdown syntax and rules, for example, top level heading is H2 not H1. When adding new files, compare them with existing ones and make sure new files have consistent formatting.
 
 ### Time-Saving Tips
 

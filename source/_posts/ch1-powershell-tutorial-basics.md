@@ -1,27 +1,26 @@
 ---
-title: PowerShell
-date: 2025-11-03 18:20:00
+title: PowerShell Basics
+date: 2025-11-03 12:00:00
 background: bg-[#397fe4]
 tags:
-
-- script
-- windows
+  - script
+  - windows
 categories:
-- Programming
-- Operating System
-intro: This is a quick reference cheat sheet covering PowerShell basics.
+  - Programming
+  - Operating System
+intro: |
+  This is a quick reference cheat sheet covering PowerShell basics.
 plugins:
-- copyCode
+  - copyCode
 ---
-
 
 ## Table of Contents
 
-- Version & Host
-- Command Structure
-- Help & Aliases
-- Scripts & Policy
-- Copying Directories
+- [Version & Host](#version-host)
+- [Command Structure](#command-structure)
+- [Help & Aliases](#help-aliases)
+- [Scripts & Policy](#scripts-policy)
+- [Copying Directories](#copying-directories)
 
 ### Version & Host {.cols-2}
 
@@ -90,7 +89,7 @@ Get-ExecutionPolicy
 
 ## Copying Directories {.cols-2}
 
-#### Initial Structure
+### Initial Structure
 
 ```powershell
 source/
@@ -99,7 +98,7 @@ source/
 dist/   # may or may not exist
 ```
 
-#### 1. Copy folder (target does NOT exist)
+### 1. Copy folder (target does NOT exist)
 
 ```powershell
 Copy-Item source dist
@@ -109,7 +108,7 @@ dist/
   file2.txt
 ```
 
-#### 2. Copy into existing folder
+### 2. Copy into existing folder
 
 ```powershell
 Copy-Item source dist
@@ -120,7 +119,7 @@ dist/
     file2.txt
 ```
 
-#### 3. Trailing slash behavior
+### 3. Trailing slash behavior
 
 ```powershell
 Copy-Item source dist/   # same as Copy-Item source dist
@@ -128,7 +127,7 @@ Copy-Item source/ dist   # same as Copy-Item source dist
 # Windows ignores trailing slashes
 ```
 
-#### 4. Copy only contents
+### 4. Copy only contents
 
 ```powershell
 Copy-Item source\* dist -Recurse
