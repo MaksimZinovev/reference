@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 Based on the Claude Code plugin documentation, here's the tree-like folder structure for the example plugin shown in the quickstart guide:
 
 ```

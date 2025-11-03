@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 You can’t clone directly into a **non-empty directory**, but there are a few clean workarounds 👇
 
 ### ✅ Option 1 – Clone into a new subfolder

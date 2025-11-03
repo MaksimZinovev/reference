@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 > [!NOTE] NOTE
 > Make sure source folder does not existist. Otherwise so `ln -s` creates a link _inside_ it → `themes/rio → /Users/maksim/repos/...`
 

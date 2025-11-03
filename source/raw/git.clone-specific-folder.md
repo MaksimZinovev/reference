@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 ## How can I clone repo but only specific folders to my local machine? <https://github.com/dharmx/walls.git>
 
 Yes, you can clone only specific folders from a Git repository! Git has a feature called "sparse checkout" that allows you to work with only a subset of the repository's files and folders.

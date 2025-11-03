@@ -1,4 +1,4 @@
-# 📖 Reference - Cheat Sheets for Developers
+Add # 📖 Reference - Cheat Sheets for Developers
 
 [![love](https://badgen.net/badge/make%20with/love/pink)](#)
 [![License](https://badgen.net/badge/license/GPL-3.0/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
@@ -13,7 +13,7 @@ sheet that could be improved, feel free to submit a [pull request](#-contributin
 ## 👀 Live Demonstration
 
 Note: The original domain for this project was quickref.me, which was acquired by a US-based company. Since then,
-https://maksimzinovev.github.io/reference is the primary and maintained domain (All within the bounds of the agreements).
+<https://maksimzinovev.github.io/reference> is the primary and maintained domain (All within the bounds of the agreements).
 
 You can view the most up-to-date cheat sheets live at [https://https://maksimzinovev.github.io/reference](https://https://maksimzinovev.github.io/reference/).
 
@@ -315,7 +315,7 @@ Reference provides cheat sheets for the following:
 - [Aspect Ratio](https://https://maksimzinovev.github.io/reference/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their
   pixel resolutions. Always confirm your final delivery ratio when shooting.
 - [CheatSheets](https://https://maksimzinovev.github.io/reference/quickref.html): This is the magic syntax variant manual that you can use on
-  https://maksimzinovev.github.io/reference, It’s a good practice for contributors.
+  <https://maksimzinovev.github.io/reference>, It’s a good practice for contributors.
 - [Emoji](https://https://maksimzinovev.github.io/reference/emoji.html): Some of the emoji codes are not super easy to remember, so here is a
   little cheat sheet.
 - [Google Search](https://https://maksimzinovev.github.io/reference/google-search.html): This quick reference cheat sheet lists of Google advanced
