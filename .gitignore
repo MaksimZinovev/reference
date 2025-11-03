@@ -110,10 +110,11 @@ dev-debug.log
 # Task files
 # tasks.json
 # tasks/ 
+.taskmaster/docs/research
 
 # MCP files
 .mcp.json
-
+mcp.json
 # Environment files
 .envrc
 
@@ -122,3 +123,7 @@ dev-debug.log
 
 # Claude AI
 .claude/settings.local.json
+
+
+# Local files 
+source/raw/.obsidian
