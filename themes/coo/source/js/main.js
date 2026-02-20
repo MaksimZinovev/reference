@@ -563,6 +563,7 @@ window.addEventListener('load', () => {
 
     // Fallback: derive the directory path from current location
     const basePath = configuredRoot ?? window.location.pathname.replace(/\/[^/]*$/, '/');
+    this.basePath = basePath;
     Utils.LIBRARY.fuse.lib = [`${basePath}js/fuse_7.1.0.js`];
     const settings = options ? options : {};
     const defaultOptions = {
@@ -868,8 +869,9 @@ window.addEventListener('load', () => {
         if (tagStr !== '') {
           tagsHTML = `<div class="w-px h-3 bg-indigo-300 mr-2"></div><span class="mr-2">${tagStr}</span>`;
         }
+        const urlPath = hit.path.startsWith('/') ? hit.path.slice(1) : hit.path;
         liHtml += `<li class="group ${activeStr} m-3" data-index="${itemIndex}">
-                                <a href="${hit.path}" class="flex justify-between items-center rounded-lg py-1 px-4 transition-colors duration-100 ease-in-out overflow-hidden">
+                                <a href="${_this.basePath}${urlPath}" class="flex justify-between items-center rounded-lg py-1 px-4 transition-colors duration-100 ease-in-out overflow-hidden">
                                     <div class="flex items-start">
                                         <div class="flex justify-center items-center w-5 mr-5 mt-2 flex-none">
                                             <i class="icon text-2xl">${hit.icon}</i>
@@ -904,11 +906,12 @@ window.addEventListener('load', () => {
 
       hit.sections.forEach((section) => {
         let h3HTML = '';
+        const urlPath = hit.path.startsWith('/') ? hit.path.slice(1) : hit.path;
         section.h3.forEach((h3) => {
-          const anchor = hit.path + h3.anchor;
+          const anchor = _this.basePath + urlPath + h3.anchor;
           h3HTML += `<a href="${anchor}" class="inline-block mr-1 px-2 p-0.5 transition duration-200 ease-in-out rounded-full hover:bg-indigo-500 text-slate-500 dark:text-slate-300 hover:text-slate-50">${h3.title.toLowerCase()}</a>`;
         });
-        const anchor = hit.path + section.h2.anchor;
+        const anchor = _this.basePath + urlPath + section.h2.anchor;
         olInnerHtml += `<li class="text-slate-700 dark:text-slate-300 hover:underline hover:text-slate-900 mt-3 mb-2">
                                 <a href="${anchor}"> ${section.h2.title}</a>
                             </li>
@@ -928,6 +931,13 @@ window.addEventListener('load', () => {
   };
 
   // Start search
+  // Update fuse.js path based on root config before loading
+  const configuredRoot =
+    window?.themeConfig?.root ||
+    document.querySelector('meta[name="root"]')?.getAttribute('content');
+  const basePath = configuredRoot ?? window.location.pathname.replace(/\/[^/]*$/, '/');
+  Utils.LIBRARY.fuse.lib = [`${basePath}js/fuse_7.1.0.js`];
+
   Utils.externalLibrary(Utils.LIBRARY.fuse)
     .then((Fuse) => {
       if (typeof Fuse === 'undefined') {

@@ -1,19 +1,16 @@
 ---
-
 title: PowerShell Hashtables
 date: 2025-11-03 19:18:50
 background: bg-[#397fe4]
 tags:
-
-- powershell
-- cheatsheet
+  - powershell
+  - cheatsheet
 categories:
-- Scripting
-- Windows
+  - Programming
+  - Operating System
 intro: Quick reference for creating, accessing, modifying, and using hashtables (@{}, [ordered]) in PowerShell.
 plugins:
-- copyCode
-
+  - copyCode
 ---
 
 ## PowerShell Hashtables — Quick Reference

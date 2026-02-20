@@ -12,7 +12,7 @@
                     <% if (categoryData && categoryData.posts) { %>
                         <% categoryData.posts.sort('date').map(function(post){ %>
                             <%- partial('_partial/index/card', {
-                                url: url_for(post.path),
+                                url: post.path,
                                 title: post.title,
                                 label: post.label,
                                 slug: post.slug,
