@@ -10,6 +10,7 @@ Thumbs.db
 nohup.out
 *.tmp
 *.temp
+source/raw/reference/.obsidian
 
 # Environment files #
 ######################
@@ -87,7 +88,7 @@ db.json
 .stylelintcache
 .prettierignore
 
-## Local directory to store default references from original repo and raw files that are  not ready for publishing 
+## Local directory to store default references from original repo and raw files that are  not ready for publishing
 .local
 
 
@@ -109,7 +110,7 @@ dev-debug.log
 
 # Task files
 # tasks.json
-# tasks/ 
+# tasks/
 .taskmaster/docs/research
 
 # MCP files
@@ -123,7 +124,9 @@ mcp.json
 
 # Claude AI
 .claude/settings.local.json
+.claude/settings.json
+.claude/teams/
 
 
-# Local files 
+# Local files
 source/raw/.obsidian
